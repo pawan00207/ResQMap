@@ -1,0 +1,25 @@
+{
+  "name": "resqmap",
+  "version": "1.0.0",
+  "description": "Emergency resource mapping application",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "docker:up": "docker-compose up --build",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "emergency",
+    "resources",
+    "mapping",
+    "safety"
+  ],
+  "author": "pawan",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
