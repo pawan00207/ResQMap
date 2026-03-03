@@ -55,6 +55,10 @@ ResQMap/
 
 The project is currently in the MVP stage, where core map functionality and service modules are being developed.
 
+## Deployment link of Vercel
+
+https://disaster-resque.vercel.app/
+
 ---
 
 ## Contributors
