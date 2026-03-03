@@ -1,0 +1,49 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "map": "Emergency Map",
+    "resources": "Resources",
+    "sos": "SOS Alert",
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "language": "Language",
+    "darkMode": "Dark Mode"
+  },
+  "emergency": {
+    "sos": "Emergency SOS",
+    "findNearest": "Find Nearest Help",
+    "hospitals": "Hospitals",
+    "police": "Police Stations",
+    "fire": "Fire Departments",
+    "pharmacy": "Pharmacies"
+  },
+  "reporting": {
+    "reportIssue": "Report an Issue",
+    "accident": "Accident",
+    "flood": "Flood",
+    "blockage": "Road Blockage",
+    "debris": "Debris/Hazard",
+    "submit": "Submit Report",
+    "cancel": "Cancel"
+  },
+  "alerts": {
+    "alerts": "Alerts",
+    "noAlerts": "No active alerts",
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "reports": "Reports",
+    "users": "Users",
+    "analytics": "Analytics",
+    "pending": "Pending",
+    "approved": "Approved",
+    "resolved": "Resolved"
+  }
+}

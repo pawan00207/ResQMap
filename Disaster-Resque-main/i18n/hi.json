@@ -1,0 +1,49 @@
+{
+  "common": {
+    "home": "होम",
+    "about": "के बारे में",
+    "map": "आपातकालीन मानचित्र",
+    "resources": "संसाधन",
+    "sos": "एसओएस अलर्ट",
+    "profile": "प्रोफाइल",
+    "logout": "लॉगआउट",
+    "login": "लॉगिन",
+    "register": "रजिस्टर",
+    "language": "भाषा",
+    "darkMode": "डार्क मोड"
+  },
+  "emergency": {
+    "sos": "आपातकालीन एसओएस",
+    "findNearest": "निकटतम मदद खोजें",
+    "hospitals": "अस्पताल",
+    "police": "पुलिस स्टेशन",
+    "fire": "अग्निशमन विभाग",
+    "pharmacy": "फार्मेसी"
+  },
+  "reporting": {
+    "reportIssue": "समस्या की रिपोर्ट करें",
+    "accident": "दुर्घटना",
+    "flood": "बाढ़",
+    "blockage": "सड़क अवरोध",
+    "debris": "मलबा/खतरा",
+    "submit": "रिपोर्ट सबमिट करें",
+    "cancel": "रद्द करें"
+  },
+  "alerts": {
+    "alerts": "अलर्ट",
+    "noAlerts": "कोई सक्रिय अलर्ट नहीं",
+    "critical": "गंभीर",
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "कम"
+  },
+  "admin": {
+    "dashboard": "व्यवस्थापक डैशबोर्ड",
+    "reports": "रिपोर्ट",
+    "users": "उपयोगकर्ता",
+    "analytics": "विश्लेषण",
+    "pending": "लंबित",
+    "approved": "अनुमोदित",
+    "resolved": "समाधान किया गया"
+  }
+}
