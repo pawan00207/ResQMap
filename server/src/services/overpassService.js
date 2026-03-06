@@ -1,26 +1,51 @@
-const axios = require('axios');
+const axios = require("axios");
 
-exports.fetchNearby = async (type, lat, lng) => {
+const OVERPASS_URL = "https://overpass-api.de/api/interpreter";
 
-    const query = `
+async function fetchNearbyResources(lat, lon, type) {
+
+    let query = "";
+
+    if (type === "hospital") {
+        query = `
         [out:json];
-        node["amenity"="${type}"](around:3000,${lat},${lng});
+        node["amenity"="hospital"](around:3000,${lat},${lon});
         out;
-    `;
+        `;
+    }
 
-    const response = await axios.post(
-        "https://overpass-api.de/api/interpreter",
-        query,
-        { headers: { "Content-Type": "text/plain" } }
-    );
+    if (type === "police") {
+        query = `
+        [out:json];
+        node["amenity"="police"](around:3000,${lat},${lon});
+        out;
+        `;
+    }
 
-    const elements = response.data.elements;
+    if (type === "fire") {
+        query = `
+        [out:json];
+        node["amenity"="fire_station"](around:3000,${lat},${lon});
+        out;
+        `;
+    }
 
-    // Transform to frontend-friendly format
-    return elements.map(el => ({
-        id: el.id,
-        lat: el.lat,
-        lng: el.lon,
-        name: el.tags?.name || type
-    }));
+    if (type === "accessible") {
+        query = `
+        [out:json];
+        (
+            node["wheelchair"="yes"](around:3000,${lat},${lon});
+            node["ramp"="yes"](around:3000,${lat},${lon});
+        );
+        out;
+        `;
+    }
+
+    const response = await axios.post(OVERPASS_URL, query);
+
+    return response.data.elements;
+}
+
+module.exports = {
+    fetchNearbyResources
 };
