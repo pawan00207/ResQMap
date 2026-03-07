@@ -1,17 +1,18 @@
--- ResQMap database schema
+-- ResQMap Database Schema
+-- Stores users, incidents, emergency services and local resources
 
--- Users table
+-- Users table (for authentication if needed)
 CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   email VARCHAR(150) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Incidents reported by users
+-- Incidents reported by users on the map
 CREATE TABLE incidents (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
   title VARCHAR(200),
   description TEXT,
   severity VARCHAR(50),
@@ -21,11 +22,11 @@ CREATE TABLE incidents (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Emergency services (hospital, police, fire station etc.)
+-- Emergency services such as hospitals, police stations or fire stations
 CREATE TABLE emergency_services (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
   name VARCHAR(150) NOT NULL,
-  type VARCHAR(50),
+  type VARCHAR(50), -- hospital, police, fire
   address TEXT,
   phone VARCHAR(20),
   latitude DECIMAL(10,6),
@@ -33,9 +34,9 @@ CREATE TABLE emergency_services (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Other local resources like pharmacy, shelter, food vendors
+-- Other local resources like pharmacies, shelters or food vendors
 CREATE TABLE resources (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
   name VARCHAR(150) NOT NULL,
   category VARCHAR(100),
   address TEXT,
@@ -44,9 +45,10 @@ CREATE TABLE resources (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Accessibility related points (ramps, stairs, barriers)
+-- Accessibility related points (ramps, stairs, barriers etc.)
 CREATE TABLE accessibility_points (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
+  name VARCHAR(150),
   description TEXT,
   type VARCHAR(100),
   latitude DECIMAL(10,6),
@@ -54,12 +56,12 @@ CREATE TABLE accessibility_points (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Indexes for faster location based search
+-- Indexes to improve performance for location based queries
 CREATE INDEX idx_incidents_location
-ON incidents(latitude, longitude);
+ON incidents (latitude, longitude);
 
 CREATE INDEX idx_resources_location
-ON resources(latitude, longitude);
+ON resources (latitude, longitude);
 
 CREATE INDEX idx_emergency_services_location
-ON emergency_services(latitude, longitude);
+ON emergency_services (latitude, longitude);
