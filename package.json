@@ -21,6 +21,8 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.1"
+  },
+  "dependencies": {
+    "axios": "^1.13.6"
   }
 }
-

@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const incidentRoutes = require('./routes/incidentRoutes');
 const locationRoutes = require('./routes/locationRoutes');
 const errorHandler = require('./middleware/errorHandler');
+const searchRoutes = require('./routes/searchRoutes');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 // API Routes
 app.use('/api/v1/incidents', incidentRoutes);
 app.use('/api/v1/locations', locationRoutes);
+app.use('/api/v1/search', searchRoutes);
 
 // Error Handling
 app.use(errorHandler);
