@@ -2,7 +2,16 @@
 
 const pool = require("../config/db");
 
-
+// Get all resources
+const getAllResources = async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM resources ORDER BY id DESC");
+    res.json(result.rows);
+  } catch (error) {
+    console.error("Error fetching resources:", error.message);
+    res.status(500).json({ message: "Server error" });
+  }
+};
 
 // Get resource by ID
 const getResourceById = async (req, res) => {
