@@ -1,3 +1,5 @@
+
+
 const db = require("../db");
 
 exports.voteResource = async (req, res) => {
