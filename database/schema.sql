@@ -81,3 +81,13 @@ USING GIST (location);
 CREATE INDEX incidents_location_idx 
 ON incidents 
 USING GIST (location);
+
+-- Contribution Voting System
+CREATE TABLE votes (
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    resource_id INT NOT NULL,
+    vote_type INT CHECK (vote_type IN (1, -1)),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, resource_id)
+);
