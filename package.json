@@ -8,7 +8,7 @@
     "server": "cd server && npm start",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "concurrently \"npm run build --prefix client\" \"npm run build --prefix server\"",
+    "build": "npm install --prefix client && npm run build --prefix client",
     "test": "echo \"No tests specified\" && exit 0",
     "docker:up": "docker-compose up --build",
     "docker:down": "docker-compose down"
