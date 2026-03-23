@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../config/db");
+
 
 // return dashboard statistics
 router.get("/analytics/metrics", async (req, res) => {
