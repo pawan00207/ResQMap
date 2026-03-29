@@ -83,7 +83,7 @@ SUPABASE_JWT_SECRET=your_jwt_secret
 ```bash
 pnpm dev
 ```
-Visit http://localhost:3000
+Visit - (https://resq-app-nine.vercel.app/)
 
 5. **Build for Production**
 ```bash
@@ -242,6 +242,3 @@ For issues, questions, or feature requests, please open an issue on GitHub or co
 ---
 
 **ResQMap** - Connecting people with resources, one emergency at a time.
-
-
-
