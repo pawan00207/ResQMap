@@ -1,9 +1,6 @@
 # ResQMap - Emergency Response & Resource Navigation Platform
 
 
-https://github.com/user-attachments/assets/df4ce28a-5f80-4796-8d3d-4a154341a989
-
-
 A comprehensive web application for emergency response coordination, accessible route navigation, local resource discovery, and disaster management. Built with Next.js 15, React 19, Leaflet maps, and Supabase.
 
 ## Features
@@ -247,7 +244,7 @@ For issues, questions, or feature requests, please open an issue on GitHub or co
 
 Demo Video
 
-Watch the video here:-https://drive.google.com/drive/folders/1TYi6LKFkmuHZCieZbyQiVZRS5tr-dhW4
+Watch the video here:-https://github.com/user-attachments/assets/df4ce28a-5f80-4796-8d3d-4a154341a989
 
 ---
 
